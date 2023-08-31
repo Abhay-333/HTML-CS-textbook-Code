@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Animations
+        </title>
+        <style>
+            .container
+            {
+                background-color: blueviolet;
+                display: flex;
+            }
+            .box
+            {
+                position:relative;
+                background-color: blue;
+                height: 300px;
+                width: 300px;
+                animation-name: Abhay1;
+                animation-name: Abhay2;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                /* animation-fill-mode: alternate; */
+                animation-delay: 1s;
+                /* animation-direction: reverse;
+                This properties can be use using short hand
+                animation: animation-name animation-duration animation-timing-function animation-delay animation--iteration-count animation-fill-mode; */
+                animation: Abhay 5s ease-in 1s 12 backwards;
+            }
+
+            @keyframes Abhay1
+            {
+                from
+                {
+                    width: 200px;
+                }
+                
+                to
+                {
+                    width: 900px;
+
+                }
+            }
+       
+            @keyframes Abhay2
+            {
+                0%
+                {
+                    top:0px;
+                    left:0px;
+                }   
+                25%
+                {
+                    top:250px;
+                    left:0px;
+                } 
+                50%
+                {
+                    top:250px;
+                    left:0px;
+                    
+                }
+                75%
+                {
+                    top:250px;
+                    left:250px;
+
+                }
+                100%
+                {
+                    top:0px;
+                    left:150px;
+                }
+            }
+            
+            </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+        <div class="box">
+            <h1>This is box</h1></div>     
+        </div>
+    </body>
+</html>

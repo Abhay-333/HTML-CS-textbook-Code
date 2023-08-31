@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Tags </title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="Simple.html">Home   |</a>
+        <a href="Basic_tags&Attributes.html"> Product</a>
+    </nav>
+
+    <p>
+    
+    <!!DOCTYPE html> - used to identify that this file is html file.
+    <!html> - All the content to be displayed on the brower should be written in this html tag.
+    <!head> - In the head tag we can add page title. Even the javascript to our page is added using head tag. Helps in SEO 
+    <!title> - used to give title to webpage. 
+    <!body> - All the content that is visible on the browser is written in body tag. 
+    <!p> tag - Used in defining the paragraph.
+    <!h1>....<!h6> - used to give heading.h1 defines the largest heading size and h6 has the least. Helps in SEO
+    <!pre> - Pre formatted text.
+    <!a> - use as hyperlink.
+    <!span> - used to group inline elements in html.Does not make any visual change by itself.
+    <!div> - used to make division of content on the webpage. It is like container for other html elements. It is block level tag.
+    <!style> - used for internal css.
+    <!center> - center aligment.
+    <!b> - bold tag
+    <!i> - Italic tag
+    <!strong> - strong font tag    
+    <!em> - emphasized font tag    
+    <!sub> - sub script tag    
+    <!sup> - super script tag    
+    <!del> - deleted tag    
+    <!table> - table tag
+    <!caption> - caption tag
+    <!tr> - table row
+    <!th> - table header also used for columns
+    <!td> - table data also used for columns
+    <!nav> - nav is used to declare the navigational section in html documents.used to group of links in a single semantic element.helps in seo. it can be used in any section of the website.
+    
+    <!ul> - unordered list
+    <!ol> - ordered list
+    <!li> - list item
+    <!dl> - description list
+    <!dd> - used for providing description for the enteries
+    <!dt> - used to name the enteries
+    <!footer> - use to define footer.
+    <!header> - use to define header.
+    <!form> - use to define forms in r webpage.Forms r used for to take data from the user (input data).Forms elements  have different types of inputs through which the user interact with.
+    
+    <!input> - it has an attribute type, to declare which type of input should be taken form the user. 
+    <!button> -creates a button
+
+    <!meta> -It is used to make our website responsive, that is our website will be visible on other device.It also helps in SEO. In internet explorer, developers have many problems because it is old. To make our website visible on the internet we can used ie=edge attribute.
+
+    <!label> - It is used to point the content under this tag
+    
+    <!select> - It allows u to select different option.
+
+    <!details> - It is used for to show details after u click it on the webpage.
+
+    Attributes
+    height - use for resize img. 
+    width - use for resize img.
+    alt - helps when image is not visible. also helps in SEO
+    src - it stands for source use while inserting an image
+    href - it stands for hypertext referance. Without this we cannot creat a hyperlink.
+    style - it is a CSS attribute.
+    target - used to open a hyperlink website in a new tab.
+    rel- It shows the relation between the current document and the linked document. Used for external css 
+    class - Used for styling html elements and apply them using internal or external css.Also used for grouping html elements
+    border - used to set border.
+    type - specifies type.
+    placeholder - It specifies a short hint that describes the expected value of an input field.
+    charset - Used with meta tag
+    description - it is used with meta tag to add the description to the ranking website
+
+
+
+    id -It stands for identifier. Used for styling html elements by giving them a unique id.The value of id must be unique within the html document. id is used by css & javascript to perform a certain task for a unique element.
+    Information about id:
+    a.A single class name can be assigned to multiple html elements.
+    b.But one id name can only be used with one html element.
+    c.An html element can not have  more than one id.
+    d. It has higher priority than class.
+
+
+    CSS properties
+    display properties
+    1.inline
+    2.blocks
+
+    CSS selectors are pattern matching rules to target the html elements for styling purposes.
+    Types of selectors
+    1.Universal selectors- * When u used and universal selector it applies to all the html elements.
+    2.class selectors- .class_name The class selector matches all the html elements on the webpage having the same class name.
+    3.ID selectors- #id_name It matches the html elements that having same id name.
+    4.Elements type selectors- html_tag_name When u style the html elements with the element type selector.Then the porperty applies to the all matched html elements. 
+
+    Attribute selectors
+    [attr] - We used this for selecting html attributes.
+
+    Grouping selectors
+    h1 - Some times many of the html elements need same style for that we used grouping selectors.
+
+    Combinators selectors- There are different variations for Combinators
+    
+    Descendant Combinator
+    element1 element2
+
+    Margin in CSS
+    A margin is a space counted from outside of the defined border of the html element.
+    
+    Padding in css
+    Padding property allows you to specify how much space should appear between the content of an element and its border.
+
+    CSS positioning- it allows us to set the position of the html element inside the html page. There r 5 types of CSS positioning 
+    1.static -this is the default position property for html element. In this property, html elements are positioned according to the normal flow of the document. The top, right, bottom, and left properties have no effect on static.
+    2.relative - In this property, html elements are positioned according to the normal flow of hte document similar to static. But u can use top, bottom, and left properties in relative posoitioning.
+    3.fixed - An element with a fixed position is displayed with respect to the browser window, also known as the viewport. If u set the position:fixed, then the html element is removed from the normal document flow, and no space is created for the html element in the page layout. It supports the  top, bottom, left, adn right properties of CSS.
+    4.absolute - An element with position:absolut; is positioned relative to the nearest positioned ancestor. The html element is removed from the normal document flow. It supports the top, bottom, left, right properties of CSS.
+    5.sticky - Sticky element is hybrid of relative and fixed positioning. It is positioned relative until a given offset position is met in the viewport - then it "sticks" to a place (like position: fixed).
+
+    Html entities are reserved text that starts with &(ampersand) and ends with a (;) semicolon.
+
+    Float- CSS float property places an element on the left or right side of its parent element, allowing text or inline elements to wrap around it.
+    A floated html element is positioned within the normal flow of the html document, then it is taken out of the flow and shifted to the left or right
+    clear -Sometimes float elements overlapped a given element for that purpose we use clear property to clear the space.It dosnt allow any float element to enter in it. 
+
+    Media query- ucan set the different styles for ur webpage on a smartphone, tablet, laptop, or desktop and this works based on the screen size, device type, or orientation of the device. 
+    
+    Forms in html
+    Form elements 
+    1. Input box 
+    2. radio button 
+    3. check box 
+    3. submit button 
+    
+    Input types
+    1.text
+    2.email
+    3.phone
+    4.password
+    5.submit
+
+    javascript functions - There r two types of functions in js 
+    1. Inbuilt functions
+    2. User-defined functions
+
+</p>
+
+
+
+
+
+</body>
+
+</html>

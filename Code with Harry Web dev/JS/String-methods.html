@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>H!</h1>
+    <script>
+        let name = "Abhay\"";
+        console.log(name.length);
+
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+
+        console.log(name.slice(2, 5));
+        console.log(name.replace("Abhay", "Baban"));
+
+        let friend = "Tejas";
+        console.log(name.concat(" is a friend of ", friend))       // Concat = To join 
+        let friend1 = "     Krushna       ";
+        console.log(friend1.trim());
+
+        let friend2 = "Vinayak";
+
+        console.log(friend2[0]);
+        console.log(friend2[1]);
+
+        // Use for loop to print a string 
+        for (let i = 0; i < friend2.length; i++) {
+            console.log(friend2[0] + friend2[1] + friend2[2] + friend2[3] + friend2[4] + friend2[5] + friend2[6]);
+        }
+
+        let a = "Abh\""
+        console.log(a.length);
+
+
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+        const word = 'fox2';
+        console.log(sentence.includes(word));
+        console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
+        // Expected output: "The word "fox" is in the sentence"
+
+
+        const str1 = 'Saturday night plans';
+
+        console.log(str1.startsWith('Sat'));
+        // Expected output: true
+
+        console.log(str1.startsWith('Sat', 3));
+        // Expected output: false
+
+        let str2 = "Please give me Rs 1000";
+        let amount = str2.slice("Please give me Rs ".length);
+        console.log(amount)
+        amount = Number.parseInt(amount);
+        console.log(typeof amount);
+
+        let friend3 = "Om";
+        friend3[2] = "O";    
+        // JS will ignore this code because string is immutable. We can replace it with the replace method.
+        
+        console.log(friend3);
+
+        let numb = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        delete numb[0];
+        console.log(numb.length);
+        
+        let numb1 = [11, 12, 13, 14, 15, 16, 17, 18, 19];
+
+        let newArray = numb.concat(numb1);
+        console.log(newArray);
+        console.log(numb, numb1);
+
+        // sort method
+        let compare = (a, b) => {
+            return b - a;
+        }
+       
+        let numb2 = [12, 1, 25, 63, 24]
+        numb2.sort(compare)
+        console.log(numb2);     // Its sorts the given data in alphabetical order
+        
+        numb2.reverse;
+        console.log(numb2);    
+
+        // Splice & slice
+
+        let numb3 = [352, 267, 73, 783, 26, 37, 274]
+        numb3.splice(2, 4, 1535, 6263, 37735, 4757, 8455, 747574)   // splice can be used to add new items to an array
+        console.log(numb3)
+        
+        let deletedvalues = numb3.splice(2, 4, 1535, 6263, 37735, 4757, 8455, 747574)   // splice can be used to add new items to an array
+        console.log(deletedvalues)
+
+        let numb4 = numb3.slice(3, 6)
+        console.log(numb4)
+    </script>
+
+</body>
+
+</html>

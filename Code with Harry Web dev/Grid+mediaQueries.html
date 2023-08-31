@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid+media queries</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+            span {
+                    text-align: center;
+                    display: block;
+                }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body {
+                display: block;
+                background-color: blue;
+            }
+            span {
+                    text-align: center;
+                    display: block;
+                }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+            aside
+            {
+                display: none;
+            }
+        }
+        
+        @media only screen and (min-width:500px) and (max-width:600px) {
+            body {
+                display: block;
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+                span {
+                    text-align: center;
+                    display: block;
+                }
+        }
+
+        @media only screen and (min-width:800px) {
+            body {
+                display: block;
+                background-color: rgb(5, 67, 182);
+            }
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: white;
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            text-align: center;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About Us</span>
+            <span>Contact Us</span>
+            <span>Services</span>
+        </nav>
+        <section class="bdr">
+            <h1>Learn CSS in Marathi</h1>
+        </section>
+        <aside class="bdr">
+            <h1>More About us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">
+        Copyright ABHAY 2023
+    </footer>
+</body>
+
+</html>

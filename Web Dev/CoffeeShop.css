@@ -1,0 +1,102 @@
+.coffee-logo {
+    height: 100%;
+    text-align: center;
+    margin: 10px;
+    float: left;
+}
+
+.header
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(6, 6, 73);
+    z-index:1;
+}
+.logo-text
+{
+    display:block;
+    color:white;
+}
+.coffee-nav
+{
+    float:right;
+    height:100%;
+    color:white;
+    font-family:"poppins";   
+}
+.coffee-nav a
+{
+    color:aliceblue;
+    font-size:15px;
+    font-weight:700;
+    padding-right:40px;
+    padding-top:12%;
+    display:inline-block;
+}
+body
+{
+    margin:0px;
+}
+.site-content
+{
+    position:absolute;
+    top:78px;
+    width:100%;
+}
+.image-content
+{
+    background-image: url("background-image.jpg");
+    height:700px;
+    width:100%;
+    text-align:center;
+}
+.heading
+{
+    color:aliceblue;
+    font-family:"poppins";   
+    position:relative;
+    top:10%;
+}
+.card-list
+{
+    font-family:"poppins";   
+    width:100%;
+}
+#product
+{
+    font-family:"poppins";
+    text-align:center;
+}
+.card
+{
+    width:22%;
+    height:300px;
+    padding:1.5%;
+    float:left;
+    text-align:center;
+}
+.card img
+{
+    width:100%;
+}
+.order-section
+{
+    width:100%;
+}
+#order
+{
+    text-align:center;
+}
+.form
+{
+    width:200px;
+    margin:0 auto;
+}
+.form input
+{
+    padding:10px;
+    margin:10px;
+}

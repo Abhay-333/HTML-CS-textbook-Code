@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body onmouseover="change_paragraph_text()">
+
+    <img src="background-image.jpg" alt="bg img" id="bg-img" onclick="update_image()" style="width:33%;">
+    
+    <p id="output" onclick="change_paragraph_text()"> Default text</p>
+
+    <input onkeyup="change_paragraph_text(this.value)">
+
+    <script type="text/javascript">
+        function change_paragraph_text(text) 
+        {
+            document.getElementById("output").innerHTML = text;
+        }
+
+        function pi() {
+            return 3.14;
+        }
+
+        function area_of_circle(radius) {
+            area = pi() * radius * radius;
+            return area;
+        }
+
+        alert(area_of_circle(5))
+
+        var a = 10;
+        var b = 20;
+        if (a > b) {
+            alert("The value of a is greater than b.")
+        }
+        else {
+            alert("The value of b is greater than a")
+        } 
+
+        function update_user()
+        {
+            document.getElementById("output").style.color="red";
+            document.getElementById("output").style.fontSize="20px";
+            user_number =document.getElementById("user_number").value;
+            
+            httpRequest = new XMLHttpRequest();
+            httpRequest.open("GET" , "https://reqres.in/api/users/"+user_number);
+            httpRequest.send();
+
+            httpRequest.onreadystatechange = function()
+            {
+                if (this.readyState == 4 && this.status == 200)
+                {
+                    user_data =JSON.parse(this.responseText);
+                    document.getElementById("output").innerHTML = user_data.data.first_name;
+                }
+            }
+        }
+        function update_image()
+        {
+            document.getElementById("bg-img").src = "mocha-image.png";
+        }
+    </script>
+
+<input id="user_number" type="text">
+<button onclick ="update_user()">Submit</button>
+
+
+
+</body>
+
+</html>

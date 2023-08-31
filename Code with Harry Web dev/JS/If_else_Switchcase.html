@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If else, Switch case, Scope</title>
+</head>
+<body>
+    <h1>
+        This is a heading 1
+    </h1>
+    
+    <script>
+        var a = "This is a string";     
+        var a = "This is a string5";
+        console.log(a);
+
+        let b="24";
+        console.log(b);             // Scope Resolution 'let' is block level scope i.e local scope 
+        {
+        let b="a";
+        console.log(b);
+        }
+
+        const c= 234;
+        console.log(c);
+
+        let age=5;
+        if(age>18)
+        {
+            console.log("Then u can drink water");
+        }
+        else if(age==5)
+        {
+            console.log("Age is 5");
+        }
+        else
+        {
+            console.log("You can drink cold drink");
+        }
+
+        const cupcakes=23;
+
+        switch (cupcakes) {
+            case 10:
+                console.log("The Value of cups is 10")
+                break;
+            case 11:
+                console.log("The Value of cups is 11")
+                break;
+            case 12:
+                console.log("The Value of cups is 12")
+                break;
+            case 13:
+                console.log("The Value of cups is 13")
+                break;
+        
+            default:console.log("Cupcakes not availabel")
+                break;
+        }
+    </script>
+</body>
+</html>

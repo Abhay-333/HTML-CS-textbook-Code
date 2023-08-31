@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Hi
+    </h1>
+    <script>
+        let a = prompt("How old are you?");
+        a = Number.parseInt(a)      // Converting the string to a number. Also known as Typecasting  
+        if (a > 18) {
+            alert("This is valid age");
+        }
+        else if (a < 0) {
+            // alert("This is valid age");
+            alert("Sorry! You are not eligible. This is invalid age.");
+        }
+        else if (a < 9) {
+            alert("Sorry! you are a kid");
+        }
+        else if (a < 18 && a >= 9) {
+            alert("Sorry! you are still a kid that's why we cannot grant you the driving license.");
+        }    
+        console.log("You can", (a<18? "not drive" : "drive"))           // Ternary Operator
+
+
+        let b = prompt("What do you want?");
+        switch (b)
+        {
+            case 'Oranges':
+                console.log('Oranges are for 10 Rs.');
+                break;
+                case 'Mangoes':
+                    case 'Papayas':
+                    console.log('Mangoes and papyas are for 20 Rs.');
+                    
+                    default:
+                        console.log('Sorry! we are out of stock');
+        }
+        let age = prompt("What is your age?");
+        if(age>10 && age<20)
+        {
+            console.log("Your age lies between 10 and 20.")
+        }
+        else
+        {
+            console.log("Your age doesnt lies between 10 and 20.")
+        }
+
+        let age1 = prompt("What is your age?");
+        age1 = Number.parseInt(age1);
+        
+        switch (age1)
+        {
+            case 10: 
+            console.log("Your age is 10.");
+            break;
+            
+            case 11: 
+            console.log("Your age is 11.");
+            break;
+            
+            case 12: 
+            console.log("Your age is 12.");
+            break;
+            
+            case 13: 
+            console.log("Your age is 13.");
+            break;
+            
+            case 14: 
+            console.log("Your age is 14.");
+            break;
+            
+            case 15: 
+            console.log("Your age is 15.");
+            break;
+            
+            case 16: 
+            console.log("Your age is 16.");
+            break;
+            
+            default:
+                console.log("you are not of this world");
+            }
+            
+            let num = prompt("Enter a number: ");
+            num = Number.parseInt(num);
+            if ( num%2==0 && num%3==0)
+            {
+                console.log("Your number is divisible by 2 and 3");
+            }
+            else
+            {
+                console.log("Your number is not divisible by 2 and 3");
+
+            }
+            
+            let num1 = prompt("Enter a number: ");
+            num1 = Number.parseInt(num1);
+            if ( num%2==0)
+            {
+                console.log("Your number is divisible by 2");
+            }
+            else if (num%3==0)
+            {
+                console.log("Your number is not divisible by 3");
+            }
+            else
+            {
+                console.log("this is not a number");
+            }
+            
+            </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>hello</h1>
+    
+    <script>
+        let a = 23;
+        let b = 53;
+        let c = 74;
+
+        function Avg(x, y)
+        {   
+            return Math.round((x + y)/2);
+        }
+        console.log("Sum of a and b is ", Avg(a, b));
+        console.log("Sum of b and c is ", Avg(b, c));
+        console.log("Sum of a and c is ", Avg(a, c));
+
+        const sum = (p, q) =>
+        {
+            return p + q;
+        }
+        console.log(sum (43, 7));
+
+        const hello = () => {
+            console.log("Hello! World");
+            return "Hi";
+        }
+
+        let h = hello();
+        console.log(h) 
+
+        // Exercise
+        let marks = {
+            Harry: 24,
+            Abhay: 36,
+            Tejas: 73,
+            Bhaijaan: 97,
+        }
+
+        for (let i = 0; i < Object.keys(marks).length; i++)
+        {
+            console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
+        }
+
+        for (let key in marks)
+        {
+            console.log("The marks of " + key + " are " + marks[key] )
+        }
+
+        let correctnum = 5;
+        let i;
+        while(i != correctnum)
+        {
+            i = prompt("Enter The correct Number: ");
+            i = Number.parseInt(i);
+            console.log("Try again!!!")
+            
+        }
+        console.log("You have entered The correct number");
+
+        const mean = (a, b, c, d) => {
+            return (a + b + c + d)/4
+        }
+
+        console.log(mean (34 ,35 ,63, 23))
+    </script>
+
+</body>
+</html>

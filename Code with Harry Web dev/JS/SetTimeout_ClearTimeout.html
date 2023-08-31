@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS SetTimeout and ClearTimeout</title>
+</head>
+<body>
+    <div class="container">
+        TIme Now is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This")
+ 
+        // setTimeout --> Allows us to run the funtion once after the interval of time
+        // clearTimeout --> Allows us to run the funtion once after the interval of time
+ 
+        function greeting(name)
+        {
+            console.log("Hello Good Morning " + name + " U R The Greatest");
+        }
+
+        // timeOut = setTimeout(greeting, 3000, "Abhay")
+        // console.log(timeOut);
+
+        // clearTimeout(timeOut)
+
+        // setTimeout(greeting(), 3000, "Abhay") Wrong it will show error because it will call the function inside sideTimeout (we cannot call funtion inside setTimeout)
+
+        // intervalId = setInterval(greeting, 2000);
+        // clearInterval(intervalId);
+
+        function displayTime()
+        {
+            time =new Date();
+            console.log(time);
+            document.getElementById(`time`).innerHTML =time;
+        }
+        setInterval(displayTime, 1000)
+        </script>
+</body>
+</html>

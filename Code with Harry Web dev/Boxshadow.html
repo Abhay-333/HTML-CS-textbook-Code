@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box Shadow</title>
+
+        <style>
+            .container
+            {
+                display: flex;
+            }
+            .card
+            {
+                margin:23px 12px;
+                background-color:blueviolet;
+                padding: 23px 12px;
+                /* box-shadow: 12px 14px blue; */
+                /* box-shadow: -12px -14px blue; */
+                /* box-shadow: 12px 14px 10px blue; */
+                /* box-shadow: -12px -14px 10px blue; */
+                /* box-shadow: -12px -14px 10px  13px blue; */
+
+                /* box-shadow: inset 3px 6px; */
+                box-shadow: inset 3px 6px green, 5px 5px red;
+            }
+            .card h2
+            {
+                text-shadow: 1px 1px white;
+                text-shadow: 1px 1px 1px white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="card" id="card-1">
+                <h2>Card 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dicta eius earum molestiae ipsam deleniti! Minima dolore cum modi harum, tempore, perspiciatis numquam atque sunt maiores, officia eum dolorem veniam ipsum itaque sit. Iusto?</p>
+            </div>
+            
+            <div class="card" id="card-2">
+                <h2>Card 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dicta eius earum molestiae ipsam deleniti! Minima dolore cum modi harum, tempore, perspiciatis numquam atque sunt maiores, officia eum dolorem veniam ipsum itaque sit. Iusto?</p>
+                
+            </div>
+            <div class="card" id="card-3">
+                <h2>Card 3</h2>                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dicta eius earum molestiae ipsam deleniti! Minima dolore cum modi harum, tempore, perspiciatis numquam atque sunt maiores, officia eum dolorem veniam ipsum itaque sit. Iusto?</p>
+            </div>
+        
+        </div>
+    </body>
+</html>

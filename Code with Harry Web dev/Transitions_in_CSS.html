@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Transition in CSS
+        </title>
+
+        <style>
+            #box
+            {
+                display: flex;
+                height: 300px;
+                width: 300px;
+                background-color: blue;
+                justify-content: center;
+                align-items:center;
+                transition-property: background-color, color;
+                transition-duration: 11s;
+                transition-timing-function: ease-in;
+                transition-delay: 1s;
+                /* transition short hand property */
+                /* transition: background-color 1s ease-in 3s; */
+                transition: all 1s ease-in-out 0.1s;
+            }
+
+            #box:hover
+            {
+                height:600px;
+                width:600px;
+                background-color: black;
+                color:white;
+                border-radius: 50px;
+                font-size: larger;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>This is Transition</h1>
+        
+        <div class=container>
+
+        <div id="box">
+            This is box
+        </div>
+
+        </div>
+    </body>
+</html>

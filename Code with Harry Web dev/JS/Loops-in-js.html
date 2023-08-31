@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hi</h1>
+    
+    <script>
+        // Program to add first n natural numbers
+        let sum = 0;
+        let n = prompt("Enter the value of n: ");
+        n = Number.parseInt(n);
+        for (i=0; i < n; i++)
+        {
+            sum += (i+1);
+            console.log((i+1), `+` );
+        }
+        
+        console.log("Sum of first " + n + " natural numbers is " + sum);
+        
+        // Factorial !5 = 5*4*3*2*1
+
+        let input = prompt ("Enter the value of a: ");
+        input = Number.parseInt(input);
+
+        let fact=1, b;
+        for (let b = 1; b <= input; b++)
+        {
+            console.log(b);
+            fact *=b;
+        }
+        // fact = b * input;
+        console.log("The Factorial of given number is: ", fact);
+
+        // The following program is for creating Multiplication Table.
+        let c = prompt ("Enter the value of c: ");
+        c = Number.parseInt(c);
+
+        let table, d;
+        for (let e = 1; e<=10; e++)
+        {
+            console.log(e*c);
+        }
+
+        let marks = {
+            Abhay:90,
+            Rahul:23,
+            Hardik:42,
+            Tejas:47,
+        }
+        for (let a in marks)    // For in Loop 
+        {
+            console.log("Marks of " + a + " are " + marks[a])
+        }
+
+        for (let a of "Abhay")    // For of Loop 
+        {
+            console.log(a);
+        }
+
+        let g = prompt("Enter the value of n: ");
+        g = Number.parseInt(g);
+
+        let f = 0;
+        
+        while( f <= g)
+        {
+            console.log(f);
+            f++;
+        }
+
+        do{
+            console.log(f);
+        }while (f<=g);
+
+        
+        </script>    
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <script>
+        // Guess the Number
+
+        let chances = 0
+        const min = 1
+        const max = 100
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;   //The Math.floor() method rounds a number DOWN to the nearest integer.
+
+        console.log(random)
+
+
+        console.log("The number is between 1 to 100. You have a limited chances to guess the number.")
+        let input;
+
+        while (input !== random) {
+            input = prompt("Guess the Number: ")
+            input = Number.parseInt(input)
+
+
+            if (input != random) {
+                console.log("Try Again!!!")
+            }
+            chances++;
+            if (input < random) {
+                console.log("The Number is Greater than " + input)
+                console.log(`You have ${100 - chances} chances left.\n`)
+            }
+            else if (input > random) {
+                console.log("The Number is Smaller than " + input)
+                console.log(`You have ${100 - chances} chances left.\n`)
+            }
+
+            if (chances === 100) {
+                console.log(gameOver())
+                break;
+            }
+        }
+        console.log("Congratulations!!! You Guessed the Number")
+        console.log(`You scored ${100 - chances} points.\n`)
+
+        function gameOver() {
+            console.log("GAME OVER!")
+            console.log("You Lose! You are out of chance")
+        }
+
+    </script>
+</body>
+
+</html>

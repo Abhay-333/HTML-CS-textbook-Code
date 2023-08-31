@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Weather API
+    </title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <p id="output">Default Text</p>
+    <input id="city">
+    <button onclick="show_temp()">Submit</button>
+
+    <script type="text/javascript">
+        function show_temp()
+        {
+            document.getElementById("output").style.color ="blue";
+            document.getElementById("output").style.fontSize ="30px";
+            city = document.getElementById("city").value;
+
+            httpRequest = new XMLHttpRequest();
+            url="https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=80863652f7ab4fbc80c85bbd16854eea&include=minutely";
+
+            httpRequest.open("GET" , url);
+            httpRequest.send();
+
+            httpRequest.onreadystatechange = function()
+            {
+                if(this.readyState == 4 && this.status == 200) 
+                {
+                    user_data =JSON.parse(this.responseText);
+                    document.getElementById("output").innerHTML= user_data.data[0].temp;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

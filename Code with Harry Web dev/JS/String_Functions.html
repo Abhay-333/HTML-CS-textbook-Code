@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Functions</title>
+</head>
+
+<body style="background-color: black;">
+
+<script>
+    var a = "This is a string";
+    console.log(a);
+    
+    var b =a.indexOf('is');     // First occurance of sub-string
+    console.log(b);
+    
+    b =a.lastIndexOf('is');     // Last occurance of sub-string
+    console.log(b);
+
+    //Sub-string From a string
+    var c = a.slice(1,7);
+    var c = a.substring(1,7);
+    console.log(c);
+
+    var d = a.replace('string', 'Abhay');
+    console.log(a);
+    console.log(d);
+
+    console.log(a.toUpperCase());
+    console.log(a.toLowerCase());
+
+    var e= a.concat(' This is a new string');
+    console.log(e);
+    
+    var f= "         This is  a timmer          ";
+    console.log(f);
+    console.log(f.trim());
+
+    var g=a.charAt(3);
+    var g=a.charCodeAt(3);
+    console.log(g);
+
+</script>    
+</body>
+</html>

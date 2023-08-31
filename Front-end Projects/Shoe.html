@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoe</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+            body
+            {
+                font-family: 'Poppins', sans-serif;
+                margin:0;
+                padding:0;
+            }
+            .left
+            {
+                position: absolute;
+                left: 0px;
+                display: inline;
+                width:70px;
+            }
+            
+            .mid
+            {
+                border-radius: 9px;
+                display: inline;
+                border: 2px solid black;
+                
+            }
+            .right
+            {
+                font-weight: bold;
+                position: absolute;
+                right:0px;
+                display: inline;
+            }
+            .header
+            {
+                display: flex;
+                justify-content:center;
+            }
+            .left img
+            {
+                width:100%;
+            }
+            .logotext
+            {
+                font-weight: bold;
+                margin:-22px;
+                text-align: center;
+            }
+            .navbar
+            {
+                display: flex;
+                justify-content: space-around;
+                padding: 0px 0px;
+            }
+            .navbar li a
+            {
+                font-weight: bold; 
+                text-decoration: none;
+                color: black;
+            }
+            .navbar li
+            {
+                padding: 0px 30px;
+                list-style-type: none;
+
+            }
+            .right input
+            {
+                height: 55px;
+                width:100%;
+                border-radius: 20px;
+                border:2px solid black;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="left">
+                <img src="sport-shoe.png">
+                <div class="logotext">
+                    NIKE
+                </div> 
+            </div>
+        
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul> 
+            </div>
+
+            <div class="right">
+                <input type="search" placeholder="Search Here"> 
+            </div>
+        </header>
+    </body>
+</html>

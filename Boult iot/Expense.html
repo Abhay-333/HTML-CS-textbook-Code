@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <script src="Expense.js"></script>
+
+    <style>
+        body
+        {
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+            font-family:'Open sans',sans-serif;
+        }
+        .full-body
+        {
+            background-image: linear-gradient(to right top,#1b92ac, #00aeb2, #00c7a3, #6fdd83, #c1ec5f);
+            font-size: 18px;
+            height: 800px;
+        }
+        .title
+        {
+            color:white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:30px;
+        }
+        .container
+        {
+            display: flex;
+            justify-content: space-between;
+            margin:100px;
+        }
+        .buttons
+        {
+            outline:none;
+            border:none;
+            padding:10px 20px;
+            color: white;
+            background-color: rgb(218, 78, 78);
+            text-decoration: none;
+            font-family:'Open sans',sans-serif;
+            font-size: 10px;
+            border-radius: 4px;
+        }
+        table
+        {
+            background-color: black;
+            color: white;
+            border:10px solid white;
+            margin-top: 30px;
+            font-family:'Open sans',sans-serif;
+            border-radius: 4px;
+        }
+        td
+        {
+            font-size: 15px;
+        }
+        .add-new-expense,.add-category
+        {
+            margin-top:10px;
+            padding: 10px;
+            background-color: #d0f501;
+            border-radius: 4px;
+            border: 1px solid grey;
+            display: none;
+        }
+        .add-new-expense span,.add-category span
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            margin: 5px 0px;
+        }
+        .form-input
+        {
+            background-color: black;
+            padding:8px 10px;
+            border: 1px solid white;
+            border-radius: 4px;
+            color: white;
+            font-family:'Open sans',sans-serif;
+        }
+        .form-input:focus
+        {
+            background-color: rgb(24, 22, 22);
+            border: 1px solid white;
+            outline: none;
+            font-family:'Open sans',sans-serif;
+        }
+        .available-categories
+        {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid white;
+            background-color: rgb(17, 15, 15);
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+        .available-categories > span
+        {
+            padding:8px 10px;
+            border-bottom:1px solid white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sub-title
+        {
+            font-size: 23px;
+            color:white;
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-body">
+        <div class="title">Expense Tracker</div>
+        <div class="container">
+            <div class="expenses">
+                <a href="#" class="button" onclick="add_expense_page()">Add Expense</a>
+                <br>
+                <div class="available-expenses">
+                    <div class="sub-title">Expenses</div>
+                    <table class="expense-table" cellspacing="10px" cellpadding="8px 20px">
+                        <tr style="border-bottom: 1px solid white;">
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Note</th>
+                        </tr>
+                    </table>
+                </div>
+                <form action="#" class="add-new-expense">
+                    <span>
+                        <label for="amount">Amount:</label>
+                        <input type="text" class="form-input" name="amount" placeholder="How much">
+                    </span>
+                    <span>
+                        <label for="category">Category:</label>
+                        <select name="category" id="category">
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label for="date">Date:</label>
+                        <input type="text" class="form-input" name="date" placeholder="dd-mm-yy">
+                    </span>
+                    <span>
+                        <label for="note">Note:</label>
+                        <input type="text" class="form-input" name="note" placeholder="What did you spend on?">
+                    </span>
+                    <span>
+                        <a href="#" class="buttons" style="font-size: 15px; padding: 8px 10px;" onclick="add_expense()">Submit</a>
+                    </span>
+                </form>
+            </div>
+            <div class="category">
+                <a href="#" class="buttons" onclick="add_category_padge()">Add Category</a>
+                <br>
+                <div class="sub-title">
+                    Categories
+                </div>
+
+                <div class="available-categories">
+                    <span>Food <span class="sum"></span></span>
+                    <span>Travel <span class="sum"></span></span>
+                    <span>Groceries <span class="sum"></span></span>
+                    <span>Entertainment <span class="sum"></span></span>
+                    <span>Others <span class="sum"></span></span>
+                </div>
+                <form action="#" class="add-category">
+                    <span>
+                        <label for="category">Category Name:</label>
+                        <input type="text" class="form-input" name="new-category" placeholder="Enter category name">
+                    </span>
+
+                    <span>
+                        <a href="#" class="buttons" onclick="add_category()">Submit</a>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

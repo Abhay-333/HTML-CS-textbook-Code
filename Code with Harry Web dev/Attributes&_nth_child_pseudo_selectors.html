@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Pseudo
+        </title>
+
+        <style>
+            .container
+            {
+                margin:auto;
+                display:block;
+                width:233px;
+            }
+            input[type='text']
+            {
+                padding:23px;
+                border:2px solid black;
+            }
+            input
+            {
+                display:block;
+            }
+            a[target]
+            {
+                font-size: 1em;
+                text-decoration: none;
+                color:blue;
+            }
+            a[target='_self']
+            {
+                font-size: 1em;
+                text-decoration: none;
+                color:rgb(29, 29, 96);
+            }
+            li:nth-child(3)
+            {
+                color:cyan;
+            }
+            li:nth-child(2n+0)
+            {
+                color:red;
+            }
+            li:nth-child(3n+3)
+            {
+                color:blue;
+            }
+            li:nth-child(odd)
+            {
+                background-color: green;
+            }
+            li:nth-child(even)
+            {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1><a href ="http://google.com" target ="_blank">Click Here To Visit Google</a></h1>
+            <h1><a href ="http://facebook.com" target ="_self">Click Here To Visit Facebook</a></h1>
+            <form action="" class="form-control">
+                <input type="text" placeholder="Enter your Name">
+                <input type="password" placeholder="Enter your Password">
+                <input type="submit" placeholder="Submit">
+            </form>
+
+            <ul>
+                <li class="item" id="item-1">Item1</li>
+                <li class="item" id="item-2">Item2</li>
+                <li class="item" id="item-3">Item3</li>
+                <li class="item" id="item-4">Item4</li>
+                <li class="item" id="item-5">Item5</li>
+            </ul>
+        </div>
+    </body>
+</html>
